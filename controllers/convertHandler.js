@@ -50,15 +50,21 @@ function ConvertHandler() {
     const galToL = 3.78541
     const lbsToKg = 0.453592
     const miToKm = 1.60934
-    var result
-
-    return result
+    const map = {
+      'gal': galToL,
+      'l': 1/galToL,
+      'mi': miToKm,
+      'km': 1/miToKm,
+      'lbs': lbsToKg,
+      'kg': 1/lbsToKg
+    }
+    const result = initNum * map[initUnit.toLowerCase()]
+    return parseFloat(result.toFixed(5))
   }
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {
-    var result
-
-    return result
+    if (initUnit==='invalid unit') return {'error': 'invalid unit'}
+    return `${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit(returnUnit)}`
   }
 
 }

@@ -144,7 +144,7 @@ suite('Unit Tests', function () {
     })
 
     test('Kg to Lbs', function (done) {
-      const input = [5, 'gal']
+      const input = [5, 'kg']
       const expected = 11.0231
       assert.approximately(convertHandler.convert(input[0], input[1]), expected, 0.1)
       done();
