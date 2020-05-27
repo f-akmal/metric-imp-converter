@@ -8,7 +8,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"test": "npx mocha ./tests/* --ui tdd --exit"
+		"test": "mocha ./tests/* --ui tdd"
 	},
 	"dependencies": {
 		"body-parser": "^1.15.2",
